@@ -305,6 +305,13 @@
             label = "CLOSE";
             tap-ms = <200>;
         };
+
+        ptm_codeBlock: ptm_codeBlock {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE &kp ENTER &kp ENTER &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW>;
+            label = "PTM_CODEBLOCK";
+        };
     };
 
     keymap {
@@ -382,11 +389,11 @@
 
         platform_mouse {
             bindings = <
-&trans  &trans                &trans         &trans         &trans         &trans    &trans  &trans          &mkp MCLK       &trans           &trans  &trans
-&trans  &kp LC(F21)           &trans         &trans         &trans         &trans    &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
-&trans  &kp LS(LC(NUMBER_1))  &kp LS(LA(R))  &kp LS(LA(T))  &kp LS(LA(N))  &trans    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &kp LC(LS(NUMBER_2))  &trans         &trans         &kp LC(LS(K))  &trans    &trans  &msc SCRL_DOWN  &msc SCRL_UP    &trans           &trans  &trans
-                                             &trans         &trans         &trans    &trans  &trans          &trans
+&trans  &trans                &trans         &trans         &trans         &trans            &trans  &trans          &mkp MCLK       &trans           &trans  &trans
+&trans  &kp LC(F21)           &trans         &trans         &trans         &trans            &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
+&trans  &kp LS(LC(NUMBER_1))  &kp LS(LA(R))  &kp LS(LA(T))  &kp LS(LA(N))  &ptm_codeBlock    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &kp LC(LS(NUMBER_2))  &trans         &trans         &kp LC(LS(K))  &trans            &trans  &msc SCRL_DOWN  &msc SCRL_UP    &trans           &trans  &trans
+                                             &trans         &trans         &trans            &trans  &trans          &trans
             >;
         };
 
