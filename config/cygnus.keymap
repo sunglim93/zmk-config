@@ -135,6 +135,22 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        ac_browser: ac_browser {
+            compatible = "zmk,behavior-tap-dance";
+            label = "AC_BROWSER";
+            #binding-cells = <0>;
+            bindings =
+                <&holdTap LA(LS(LC(V))) LS(LA(LC(Q)))>,
+                <&kp LS(LA(LC(X)))>;
+        };
+
+        ac_VMs: ac_VMs {
+            compatible = "zmk,behavior-tap-dance";
+            label = "AC_VMS";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(LC(W)))>, <&kp LS(LA(LC(I)))>;
+        };
     };
 
     macros {
@@ -278,11 +294,11 @@
 
         burp_appChange {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans             &trans             &trans                                &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans             &kp LC(LA(LS(G)))  &trans                                &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &ac_VMs        &kp LA(LS(LC(C)))  &kp LA(LC(LS(B)))  &kp LA(LS(LC(T)))                     &kp LA(LS(LC(Z)))  &kp LA(LC(LS(E)))
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(LC(A))  &ac_browser        &kp LS(LC(LA(S)))  &holdTap LS(LA(LC(O))) LS(LA(LC(P)))  &kp LA(LS(LC(V)))  &kp LA(LS(LC(F)))
+                        &trans  &trans  &trans    &trans         &trans             &trans
             >;
         };
     };
