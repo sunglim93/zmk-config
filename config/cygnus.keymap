@@ -16,6 +16,21 @@
             bindings = <&mo 3>;
             key-positions = <48 53>;
         };
+
+        copy {
+            bindings = <&kp K_COPY>;
+            key-positions = <38 39>;
+        };
+
+        paste {
+            bindings = <&kp K_PASTE>;
+            key-positions = <39 40>;
+        };
+
+        ctrlAltTab {
+            bindings = <&kp LC(LA(TAB))>;
+            key-positions = <37 39>;
+        };
     };
 
     behaviors {
@@ -152,6 +167,16 @@
 &ind_bat      &ind_con      &trans        &trans        &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans        &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
                                           &trans        &trans  &trans        &trans  &trans  &trans
+            >;
+        };
+
+        burp {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
