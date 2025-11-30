@@ -151,6 +151,48 @@
             #binding-cells = <0>;
             bindings = <&kp LS(LA(LC(W)))>, <&kp LS(LA(LC(I)))>;
         };
+
+        burp_rep: burp_rep {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BURP_REP";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(R))>, <&kp LC(R)>;
+        };
+
+        burp_proxy: burp_proxy {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BURP_PROXY";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(P))>, <&kp LC(T)>;
+        };
+
+        burp_intruder: burp_intruder {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BURP_INTRUDER";
+            #binding-cells = <0>;
+            bindings = <&holdTap LC(P) LS(LC(I))>, <&kp LC(I)>;
+        };
+
+        burp_org: burp_org {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BURP_ORG";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(O))>, <&kp LC(O)>;
+        };
+
+        burp_send: burp_send {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BURP_SEND";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE)>, <&kp LS(LC(SPACE))>;
+        };
+
+        burp_dash: burp_dash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BURP_DASH";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(D))>, <&kp LS(LC(T))>;
+        };
     };
 
     macros {
@@ -294,11 +336,11 @@
 
         burp_appChange {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans             &trans             &trans                                &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans             &kp LC(LA(LS(G)))  &trans                                &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &ac_VMs        &kp LA(LS(LC(C)))  &kp LA(LC(LS(B)))  &kp LA(LS(LC(T)))                     &kp LA(LS(LC(Z)))  &kp LA(LC(LS(E)))
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(LC(A))  &ac_browser        &kp LS(LC(LA(S)))  &holdTap LS(LA(LC(O))) LS(LA(LC(P)))  &kp LA(LS(LC(V)))  &kp LA(LS(LC(F)))
-                        &trans  &trans  &trans    &trans         &trans             &trans
+&trans      &trans          &trans     &trans       &trans      &trans         &trans         &trans             &trans             &trans                                &trans             &trans
+&trans      &trans          &trans     &trans       &trans      &trans         &trans         &trans             &kp LC(LA(LS(G)))  &trans                                &trans             &trans
+&burp_dash  &burp_intruder  &burp_org  &burp_proxy  &burp_rep   &kp LS(F13)    &ac_VMs        &kp LA(LS(LC(C)))  &kp LA(LC(LS(B)))  &kp LA(LS(LC(T)))                     &kp LA(LS(LC(Z)))  &kp LA(LC(LS(E)))
+&trans      &kp LS(LC(S))   &trans     &trans       &burp_send  &trans         &kp LS(LC(A))  &ac_browser        &kp LS(LC(LA(S)))  &holdTap LS(LA(LC(O))) LS(LA(LC(P)))  &kp LA(LS(LC(V)))  &kp LA(LS(LC(F)))
+                                       &trans       &trans      &trans         &trans         &trans             &trans
             >;
         };
     };
