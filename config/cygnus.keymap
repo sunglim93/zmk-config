@@ -289,6 +289,22 @@
             label = "FZDOWN";
             tap-ms = <100>;
         };
+
+        img: img {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB2 &kp I>;
+            label = "IMG";
+            tap-ms = <200>;
+        };
+
+        close: close {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_ALT &kp F4 &kt LEFT_ALT>;
+            label = "CLOSE";
+            tap-ms = <200>;
+        };
     };
 
     keymap {
@@ -356,7 +372,7 @@
 
         burp_appChange {
             bindings = <
-&trans             &trans          &trans         &trans       &trans      &trans         &trans         &trans             &trans             &trans                                &trans             &trans
+&trans             &trans          &trans         &trans       &trans      &trans         &close         &trans             &trans             &trans                                &trans             &trans
 &trans             &trans          &trans         &trans       &trans      &trans         &trans         &trans             &kp LC(LA(LS(G)))  &trans                                &trans             &trans
 &burp_dash         &burp_intruder  &burp_org      &burp_proxy  &burp_rep   &kp LS(F13)    &ac_VMs        &kp LA(LS(LC(C)))  &kp LA(LC(LS(B)))  &kp LA(LS(LC(T)))                     &kp LA(LS(LC(Z)))  &kp LA(LC(LS(E)))
 &burp_notes_htmlE  &kp LS(LC(S))   &kp LC(LS(L))  &burp_fwd    &burp_send  &trans         &kp LS(LC(A))  &ac_browser        &kp LS(LC(LA(S)))  &holdTap LS(LA(LC(O))) LS(LA(LC(P)))  &kp LA(LS(LC(V)))  &kp LA(LS(LC(F)))
@@ -376,11 +392,11 @@
 
         oneHand {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans    &trans                             &trans                               &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &kp UP_ARROW                       &trans                               &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LEFT  &kp DOWN                           &kp RIGHT                            &img      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &holdTap LC(NUMBER_1) LC(PAGE_UP)  &holdTap LC(NUMBER_9) LC(PAGE_DOWN)  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans                             &trans                               &trans    &trans  &trans  &trans
             >;
         };
     };
