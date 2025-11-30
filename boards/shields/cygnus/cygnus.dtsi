@@ -1,7 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 500
-#define ZMK_POINTING_DEFAULT_SCROL_VAL 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 700
+#define ZMK_POINTING_DEFAULT_SCROL_VAL 15
 #include <dt-bindings/zmk/pointing.h>
 
 / {
