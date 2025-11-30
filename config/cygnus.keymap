@@ -293,7 +293,7 @@
         img: img {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mkp MB2 &kp I>;
+            bindings = <&mkp RCLK &kp I>;
             label = "IMG";
             tap-ms = <200>;
         };
@@ -382,8 +382,8 @@
 
         platform_mouse {
             bindings = <
-&trans  &trans                &trans         &trans         &trans         &trans    &trans  &trans          &mkp MB3        &trans           &trans  &trans
-&trans  &kp LC(F21)           &trans         &trans         &trans         &trans    &trans  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &trans  &trans
+&trans  &trans                &trans         &trans         &trans         &trans    &trans  &trans          &mkp MCLK       &trans           &trans  &trans
+&trans  &kp LC(F21)           &trans         &trans         &trans         &trans    &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
 &trans  &kp LS(LC(NUMBER_1))  &kp LS(LA(R))  &kp LS(LA(T))  &kp LS(LA(N))  &trans    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &kp LC(LS(NUMBER_2))  &trans         &trans         &kp LC(LS(K))  &trans    &trans  &msc SCRL_DOWN  &msc SCRL_UP    &trans           &trans  &trans
                                              &trans         &trans         &trans    &trans  &trans          &trans
