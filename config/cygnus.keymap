@@ -117,6 +117,24 @@
             #binding-cells = <2>;
             tapping-term-ms = <190>;
         };
+
+        fz_left: fz_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "FZ_LEFT";
+            bindings = <&kp>, <&fzLeft>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        fz_right: fz_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "FZ_RIGHT";
+            bindings = <&kp>, <&fzRight>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -160,6 +178,38 @@
                 <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
 
             label = "AS";
+        };
+
+        fzLeft: fzLeft {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_GUI &kp LEFT &kt LEFT_GUI>;
+            label = "FZLEFT";
+            tap-ms = <100>;
+        };
+
+        fzRight: fzRight {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_GUI &kp RIGHT &kt LEFT_GUI>;
+            label = "FZRIGHT";
+            tap-ms = <100>;
+        };
+
+        fzUp: fzUp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_GUI &kp UP_ARROW &kt LEFT_GUI>;
+            label = "FZUP";
+            tap-ms = <100>;
+        };
+
+        fzDown: fzDown {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_GUI &kp DOWN &kt LEFT_GUI>;
+            label = "FZDOWN";
+            tap-ms = <100>;
         };
     };
 
@@ -208,11 +258,11 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans        &trans         &trans                              &trans                             &trans                                &trans    &trans  &trans             &trans            &trans           &trans  &trans
-&trans        &trans         &pw                                 &kp LG(UP_ARROW)                   &trans                                &trans    &trans  &kp K_VOLUME_DOWN  &kp K_MUTE        &kp K_VOLUME_UP  &trans  &trans
-&trans        &trans         &holdTap LG(LC(LA(LEFT))) LG(LEFT)  &kp LG(DOWN)                       &holdTap LG(LC(LA(RIGHT))) LG(RIGHT)  &trans    &trans  &kp K_PREV         &kp K_PLAY_PAUSE  &kp K_NEXT       &trans  &trans
-&kp LA(LEFT)  &kp LA(RIGHT)  &trans                              &holdTap LC(NUMBER_1) LC(PAGE_UP)  &holdTap LC(N9) LC(PAGE_DOWN)         &trans    &trans  &trans             &trans            &trans           &trans  &trans
-                                                                 &trans                             &trans                                &trans    &trans  &trans             &trans
+&trans        &trans         &trans                       &trans                             &trans                         &trans    &trans  &trans             &trans      &trans           &trans  &trans
+&trans        &trans         &pw                          &fzUp                              &trans                         &trans    &trans  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &trans  &trans
+&trans        &trans         &fz_left LA(LC(LG(LEFT))) 0  &fzDown                            &fz_right LA(LC(LG(RIGHT))) 0  &trans    &trans  &kp C_PREV         &kp C_PLAY  &kp C_NEXT       &trans  &trans
+&kp LA(LEFT)  &kp LA(RIGHT)  &trans                       &holdTap LC(NUMBER_1) LC(PAGE_UP)  &holdTap LC(N9) LC(PAGE_DOWN)  &trans    &trans  &trans             &trans      &trans           &trans  &trans
+                                                          &trans                             &trans                         &trans    &trans  &trans             &trans
             >;
         };
 
