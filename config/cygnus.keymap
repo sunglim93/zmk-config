@@ -18,12 +18,12 @@
         };
 
         copy {
-            bindings = <&kp K_COPY>;
+            bindings = <&kp LC(C)>;
             key-positions = <38 39>;
         };
 
         paste {
-            bindings = <&kp K_PASTE>;
+            bindings = <&kp LC(V)>;
             key-positions = <39 40>;
         };
 
@@ -276,7 +276,7 @@
             >;
         };
 
-        burp {
+        burp_appChange {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
