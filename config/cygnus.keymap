@@ -83,6 +83,13 @@
             label = "ALTTAB";
             wait-ms = <200>;
         };
+
+        pw: pw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp N3 &kp A &kp Q &kp H &kp Q &kp C &kp Y &kp B &kp N0 &kp DOT &kp N0>;
+            label = "PW";
+        };
     };
 
     keymap {
@@ -131,7 +138,7 @@
 
             bindings = <
 &trans        &trans         &trans                              &trans                             &trans                                &trans    &trans  &trans             &trans            &trans           &trans  &trans
-&trans        &trans         &trans                              &kp LG(UP_ARROW)                   &trans                                &trans    &trans  &kp K_VOLUME_DOWN  &kp K_MUTE        &kp K_VOLUME_UP  &trans  &trans
+&trans        &trans         &pw                                 &kp LG(UP_ARROW)                   &trans                                &trans    &trans  &kp K_VOLUME_DOWN  &kp K_MUTE        &kp K_VOLUME_UP  &trans  &trans
 &trans        &trans         &holdTap LG(LC(LA(LEFT))) LG(LEFT)  &kp LG(DOWN)                       &holdTap LG(LC(LA(RIGHT))) LG(RIGHT)  &trans    &trans  &kp K_PREV         &kp K_PLAY_PAUSE  &kp K_NEXT       &trans  &trans
 &kp LA(LEFT)  &kp LA(RIGHT)  &trans                              &holdTap LC(NUMBER_1) LC(PAGE_UP)  &holdTap LC(N9) LC(PAGE_DOWN)         &trans    &trans  &trans             &trans            &trans           &trans  &trans
                                                                  &trans                             &trans                                &trans    &trans  &trans             &trans
