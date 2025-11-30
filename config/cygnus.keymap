@@ -359,10 +359,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans        &trans         &trans                       &trans                             &trans                         &trans    &trans  &trans             &trans      &trans           &trans  &trans
-&trans        &trans         &pw                          &fzUp                              &trans                         &trans    &trans  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &trans  &trans
-&trans        &trans         &fz_left LA(LC(LG(LEFT))) 0  &fzDown                            &fz_right LA(LC(LG(RIGHT))) 0  &trans    &trans  &kp C_PREV         &kp C_PLAY  &kp C_NEXT       &trans  &trans
-&kp LA(LEFT)  &kp LA(RIGHT)  &trans                       &holdTap LC(NUMBER_1) LC(PAGE_UP)  &holdTap LC(N9) LC(PAGE_DOWN)  &trans    &trans  &trans             &trans      &trans           &trans  &trans
+&trans        &trans         &trans                       &trans                             &trans                         &trans    &trans  &trans             &trans            &trans           &trans  &trans
+&trans        &trans         &pw                          &fzUp                              &trans                         &trans    &trans  &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &trans  &trans
+&trans        &trans         &fz_left LA(LC(LG(LEFT))) 0  &fzDown                            &fz_right LA(LC(LG(RIGHT))) 0  &trans    &trans  &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT       &trans  &trans
+&kp LA(LEFT)  &kp LA(RIGHT)  &trans                       &holdTap LC(NUMBER_1) LC(PAGE_UP)  &holdTap LC(N9) LC(PAGE_DOWN)  &trans    &trans  &trans             &trans            &trans           &trans  &trans
                                                           &trans                             &trans                         &trans    &trans  &trans             &trans
             >;
         };
