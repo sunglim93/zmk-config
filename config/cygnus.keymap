@@ -38,17 +38,17 @@
         };
 
         rBracket {
-            bindings = <&kp RIGHT_BRACKET>;
+            bindings = <&as RIGHT_BRACKET>;
             key-positions = <18 19>;
         };
 
         lBracket {
-            bindings = <&kp LEFT_BRACKET>;
+            bindings = <&as LEFT_BRACKET>;
             key-positions = <16 17>;
         };
 
         backtickTilde {
-            bindings = <&kp GRAVE>;
+            bindings = <&as GRAVE>;
             key-positions = <12 13>;
         };
     };
