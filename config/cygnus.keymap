@@ -303,7 +303,7 @@
             #binding-cells = <0>;
             bindings = <&mkp RCLK &kp I>;
             label = "IMG";
-            tap-ms = <200>;
+            tap-ms = <300>;
         };
 
         close: close {
@@ -407,11 +407,11 @@
 
         oneHand {
             bindings = <
-&trans  &trans  &trans    &trans                             &trans                               &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &kp UP_ARROW                       &trans                               &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LEFT  &kp DOWN                           &kp RIGHT                            &img      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &holdTap LC(NUMBER_1) LC(PAGE_UP)  &holdTap LC(NUMBER_9) LC(PAGE_DOWN)  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                          &trans                             &trans                               &trans    &trans  &trans  &trans
+&trans            &trans             &trans    &trans                             &trans                               &mkp LCLK    &trans  &trans  &trans  &trans  &trans  &trans
+&trans            &trans             &trans    &kp UP_ARROW                       &trans                               &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans            &trans             &kp LEFT  &kp DOWN                           &kp RIGHT                            &img         &trans  &trans  &trans  &trans  &trans  &trans
+&kp LC(LG(LEFT))  &kp LG(LC(RIGHT))  &trans    &holdTap LC(NUMBER_1) LC(PAGE_UP)  &holdTap LC(NUMBER_9) LC(PAGE_DOWN)  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                                               &trans                             &trans                               &trans       &trans  &trans  &trans
             >;
         };
     };
