@@ -334,6 +334,13 @@
             bindings = <&none &kp STAR &kp STAR &kp LS(R) &kp E &kp Q &kp U &kp E &kp S &kp T &kp COLON &kp STAR &kp STAR &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp RET &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp RET &kp STAR &kp STAR &kp LS(R) &kp E &kp S &kp P &kp O &kp N &kp S &kp E &kp COLON &kp STAR &kp STAR &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp RET &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW>;
             label = "PTM_REQ_RES";
         };
+
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "NEW_MACRO";
+        };
     };
 
     keymap {
