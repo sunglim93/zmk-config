@@ -151,12 +151,6 @@
             layers = <0>;
         };
 
-        del {
-            bindings = <&hold_tap LC(DELETE) DELETE>;
-            key-positions = <24 23>;
-            require-prior-idle-ms = <200>;
-        };
-
         cut {
             bindings = <&kp LC(X)>;
             key-positions = <23 21>;
