@@ -199,6 +199,11 @@
             layers = <0>;
             require-prior-idle-ms = <150>;
         };
+
+        dash {
+            bindings = <&kp MINUS>;
+            key-positions = <22 21 20>;
+        };
     };
 
     behaviors {
