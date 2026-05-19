@@ -771,7 +771,7 @@
 &kp TAB                 &kp Q            &kp W            &kp E                &kp R                       &kp T          &kp Y          &kp U               &kp I         &kp O             &kp P                &as EQUAL
 &caps_word              &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F           &kp G          &kp H          &hmr RIGHT_SHIFT J  &hmr RCTRL K  &hmr RIGHT_ALT L  &hmr RIGHT_GUI SEMI  &as SQT
 &hold_AT PRINTSCREEN 0  &kp Z            &kp X            &kp C                &kp V                       &kp B          &kp N          &kp M               &as COMMA     &as DOT           &as SLASH            &as BSLH
-                                                          &lt 5 LS(LG(D))      &layer_sticky 4 LEFT_SHIFT  &lt 2 ENTER    &kp BACKSPACE  &lt 1 SPACE         &lt 3 LC(M)
+                                                          &lt 5 LS(LG(D))      &layer_sticky 4 LEFT_SHIFT  &lt 2 ENTER    &kp BACKSPACE  &lt 1 SPACE         &lt 2 LC(M)
             >;
         };
 
@@ -784,11 +784,11 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans       &trans        &trans         &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp HOME     &kp UP_ARROW  &kp END        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT     &kp DOWN      &kp RIGHT      &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PAGE_UP  &trans        &kp PAGE_DOWN  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans                  &trans        &trans                 &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &holdTap LC(HOME) HOME  &kp UP_ARROW  &holdTap LC(END) HOME  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LC(LEFT)  &kp LEFT                &kp DOWN      &kp RIGHT              &kp LC(RIGHT)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &kp PAGE_UP             &trans        &kp PAGE_DOWN          &trans         &trans
+                        &trans  &trans  &trans    &trans        &trans                  &trans
             >;
         };
 
@@ -800,11 +800,11 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans        &trans         &trans                       &trans                             &trans                         &trans    &trans  &trans             &trans            &trans           &trans  &trans
-&trans        &pw2           &pw                          &fzUp                              &trans                         &trans    &trans  &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &trans  &trans
-&trans        &trans         &fz_left LA(LC(LG(LEFT))) 0  &fzDown                            &fz_right LA(LC(LG(RIGHT))) 0  &trans    &trans  &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT       &trans  &trans
-&kp LA(LEFT)  &kp LA(RIGHT)  &trans                       &holdTap LC(NUMBER_1) LC(PAGE_UP)  &holdTap LC(N9) LC(PAGE_DOWN)  &trans    &trans  &trans             &trans            &trans           &trans  &trans
-                                                          &trans                             &trans                         &trans    &trans  &trans             &trans
+&trans  &trans  &trans                       &trans   &trans                         &trans    &trans  &trans             &trans            &trans           &trans  &trans
+&trans  &trans  &trans                       &fzUp    &trans                         &trans    &trans  &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &trans  &trans
+&trans  &trans  &fz_left LA(LC(LG(LEFT))) 0  &fzDown  &fz_right LA(LC(LG(RIGHT))) 0  &trans    &trans  &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT       &trans  &trans
+&trans  &trans  &trans                       &trans   &trans                         &trans    &trans  &trans             &trans            &trans           &trans  &trans
+                                             &trans   &trans                         &trans    &trans  &trans             &trans
             >;
         };
 
@@ -820,31 +820,31 @@
 
         burp_appChange {
             bindings = <
-&trans             &trans          &trans         &trans       &trans      &trans         &close         &trans             &trans             &trans                                &trans             &trans
-&trans             &trans          &trans         &trans       &trans      &trans         &trans         &trans             &kp LC(LA(LS(G)))  &trans                                &trans             &trans
-&burp_dash         &burp_intruder  &burp_org      &burp_proxy  &burp_rep   &kp LS(F13)    &ac_VMs        &kp LA(LS(LC(C)))  &kp LA(LC(LS(B)))  &kp LA(LS(LC(T)))                     &kp LA(LS(LC(Z)))  &kp LA(LC(LS(E)))
-&burp_notes_htmlE  &kp LS(LC(S))   &kp LC(LS(L))  &burp_fwd    &burp_send  &trans         &kp LS(LC(A))  &ac_browser        &kp LS(LC(LA(S)))  &holdTap LS(LA(LC(O))) LS(LA(LC(P)))  &kp LA(LS(LC(V)))  &kp LA(LS(LC(F)))
-                                                  &trans       &trans      &trans         &trans         &trans             &trans
+&trans  &trans                 &trans             &trans                        &trans      &trans                                  &trans         &trans             &trans             &trans                                &trans                                &trans
+&trans  &kp LC(LA(P))          &kp LC(LS(Y))      &holdTap LC(LS(A)) LC(LS(E))  &burp_dash  &kp LS(LC(NUMBER_9))                    &trans         &trans             &kp LC(LA(LS(G)))  &trans                                &trans                                &trans
+&trans  &burp_org              &burp_intruder     &burp_proxy                   &burp_rep   &kp LS(F13)                             &ac_VMs        &kp LA(LS(LC(C)))  &kp LA(LC(LS(B)))  &kp LA(LS(LC(T)))                     &holdTap LA(LS(LC(A))) LC(LA(LS(Z)))  &kp LA(LC(LS(E)))
+&trans  &burp_notes_highlight  &kp LC(LS(LA(L)))  &burp_fwd                     &burp_send  &holdTap LC(LA(W)) LC(LS(BACKSLASH))    &kp LS(LC(A))  &ac_browser        &kp LS(LC(LA(S)))  &holdTap LS(LA(LC(O))) LS(LA(LC(P)))  &kp LA(LS(LC(V)))                     &kp LA(LS(LC(F)))
+                                                  &trans                        &trans      &trans                                  &trans         &trans             &trans
             >;
         };
 
         platform_mouse {
             bindings = <
-&trans  &trans                &trans       &trans         &trans         &trans          &trans  &trans          &mkp MCLK       &trans           &trans  &trans
-&trans  &kp LC(F21)           &mkp LCLK    &mkp MCLK      &mkp RCLK      &trans          &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
-&trans  &kp LS(LC(NUMBER_1))  &redact 0 0  &truncate 0 0  &kp LS(LA(N))  &ptm_req_res    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &kp LC(LS(NUMBER_2))  &trans       &trans         &kp LC(LS(K))  &trans          &trans  &msc SCRL_DOWN  &msc SCRL_UP    &trans           &trans  &trans
-                                           &trans         &trans         &trans          &trans  &trans          &trans
+&trans  &trans                &trans       &trans         &trans         &trans          &trans          &trans          &trans          &trans           &trans  &trans
+&trans  &kp LC(F21)           &mkp LCLK    &mkp MCLK      &mkp RCLK      &trans          &mkp MCLK       &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
+&trans  &kp LS(LC(NUMBER_1))  &redact 0 0  &truncate 0 0  &kp LS(LA(N))  &ptm_req_res    &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &kp LC(LS(NUMBER_2))  &trans       &trans         &kp LC(LS(K))  &trans          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &trans  &trans
+                                           &trans         &trans         &trans          &trans          &trans          &trans
             >;
         };
 
         oneHand {
             bindings = <
-&trans            &trans             &trans    &trans                             &trans                               &mkp LCLK    &trans  &trans  &trans  &trans  &trans  &trans
-&trans            &trans             &trans    &kp UP_ARROW                       &trans                               &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans            &trans             &kp LEFT  &kp DOWN                           &kp RIGHT                            &img         &trans  &trans  &trans  &trans  &trans  &trans
-&kp LC(LG(LEFT))  &kp LG(LC(RIGHT))  &trans    &holdTap LC(NUMBER_1) LC(PAGE_UP)  &holdTap LC(NUMBER_9) LC(PAGE_DOWN)  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                                               &trans                             &trans                               &trans       &trans  &trans  &trans
+&trans  &trans         &trans         &trans                             &trans                               &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(MINUS)  &kp LC(EQUAL)  &kp UP_ARROW                       &trans                               &holdTap LS(LC(T)) T    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LS(W)      &kp LEFT       &kp DOWN                           &kp RIGHT                            &img                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans         &trans         &holdTap LC(NUMBER_1) LC(PAGE_UP)  &holdTap LC(NUMBER_9) LC(PAGE_DOWN)  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                                      &trans                             &trans                               &trans                  &trans  &trans  &trans
             >;
         };
     };
