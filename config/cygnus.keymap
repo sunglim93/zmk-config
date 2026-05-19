@@ -787,6 +787,36 @@
             tap-ms = <200>;
         };
 
+        select_line: select_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LS(END)>;
+            label = "SELECT_LINE";
+            tap-ms = <100>;
+        };
+
+        double_click: double_click {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB1 &mkp MB1>;
+            label = "DOUBLE_CLICK";
+            tap-ms = <50>;
+        };
+
+        shift_click: shift_click {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LC(LEFT_SHIFT) &mkp MB1 &kt LC(LEFT_SHIFT)>;
+            label = "SHIFT_CLICK";
+        };
+
+        mac_select_line: mac_select_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT) &kp LS(LG(RIGHT))>;
+            label = "MAC_SELECT_LINE";
+        };
+
         ptm_codeBlock: ptm_codeBlock {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
