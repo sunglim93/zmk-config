@@ -755,6 +755,22 @@
             tap-ms = <100>;
         };
 
+        fz_expand_left: fz_expand_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_GUI &kt LEFT_ALT &kt LCTRL &kt LEFT &kt LEFT_GUI &kt LALT &kt LCTRL>;
+            label = "FZ_EXPAND_LEFT";
+            tap-ms = <50>;
+        };
+
+        fz_expand_right: fz_expand_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_GUI &kt LEFT_ALT &kt LCTRL &kt RIGHT &kt LEFT_GUI &kt LALT &kt LCTRL>;
+            label = "FZ_EXPAND_RIGHT";
+            tap-ms = <50>;
+        };
+
         img: img {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -769,6 +785,36 @@
             bindings = <&kt LEFT_ALT &kp F4 &kt LEFT_ALT>;
             label = "CLOSE";
             tap-ms = <200>;
+        };
+
+        select_line: select_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LS(END)>;
+            label = "SELECT_LINE";
+            tap-ms = <100>;
+        };
+
+        double_click: double_click {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB1 &mkp MB1>;
+            label = "DOUBLE_CLICK";
+            tap-ms = <50>;
+        };
+
+        shift_click: shift_click {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LC(LEFT_SHIFT) &mkp MB1 &kt LC(LEFT_SHIFT)>;
+            label = "SHIFT_CLICK";
+        };
+
+        mac_select_line: mac_select_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT) &kp LS(LG(RIGHT))>;
+            label = "MAC_SELECT_LINE";
         };
 
         ptm_codeBlock: ptm_codeBlock {
