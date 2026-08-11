@@ -592,7 +592,7 @@
 
             w_code_block {
                 sequence = <W C>;
-                bindings = <&ptm_code_block>;    
+                bindings = <&ptm_codeBlock>;    
             };
         };
     };
