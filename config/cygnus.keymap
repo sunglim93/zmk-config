@@ -971,7 +971,7 @@
 &trans  &trans     &trans        &trans                           &trans                     &trans    &trans    &trans  &trans  &trans  &trans     &trans
 &trans  &trans     &trans        &trans                           &trans                     &trans    &kp FSLH  &as N7  &as N8  &as N9  &trans     &trans
 &trans  &sk LCTRL  &sk LEFT_ALT  &sk LEFT_GUI                     &sk LEFT_SHIFT             &trans    &kp DOT   &as N4  &as N5  &as N6  &kp PLUS   &trans
-&trans  &mkp MB4   &mkp MB5      &holdTap LG(NUMBER_1) LG(PG_UP)  &holdTap LG(N9) LG(PG_DN)  &trans    &as N0    &as N1  &as N2  &as N3  &kp MINUS  &trans
+&trans  &mkp MB4   &mkp MB5      &holdTap LC(NUMBER_1) LC(PG_UP)  &holdTap LC(N9) LC(PG_DN)  &trans    &as N0    &as N1  &as N2  &as N3  &kp MINUS  &trans
                                  &trans                           &trans                     &trans    &trans    &trans  &trans
             >;
         };
