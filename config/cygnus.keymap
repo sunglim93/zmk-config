@@ -564,6 +564,36 @@
                 sequence = <O W>;
                 bindings = <&to 0>;
             };
+
+            p_netspi {
+                sequence = <P N>;
+                bindings = <&fish1>;    
+            };
+
+            p_aws {
+                sequence = <P A>;
+                bindings = <&fish2>;    
+            };
+
+            p_mac {
+                sequence = <P M>;
+                bindings = <&fish3>;    
+            };
+
+            w_netspi {
+                sequence = <W N>;
+                bindings = <&word_netspi>;    
+            };
+
+            w_signoff {
+                sequence = <W S>;
+                bindings = <&word_signoff_cmd>;    
+            };
+
+            w_code_block {
+                sequence = <W C>;
+                bindings = <&ptm_code_block>;    
+            };
         };
     };
 
