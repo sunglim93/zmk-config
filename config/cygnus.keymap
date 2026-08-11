@@ -8,16 +8,6 @@
     combos {
         compatible = "zmk,combos";
 
-        bluetooth {
-            bindings = <&mo 0>;
-            key-positions = <41 36>;
-        };
-
-        bt2 {
-            bindings = <&mo 0>;
-            key-positions = <48 53>;
-        };
-
         copy {
             bindings = <&kp LC(C)>;
             key-positions = <38 39>;
@@ -203,7 +193,17 @@
 
         dash {
             bindings = <&as MINUS>;
-            key-positions = <22 21 20>;
+            key-positions = <21 20>;
+        };
+
+        as_apos {
+            bindings = <&as APOS>;
+            key-positions = <32 33>;
+        };
+
+        ldr {
+            bindings = <&leader1>;
+            key-positions = <16 15>;
         };
     };
 
@@ -554,8 +554,16 @@
         leader1: leader1 {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
-            os_mac { sequence = <O M>; bindings = <&to 1>; };
-            os_win { sequence = <O W>; bindings = <&to 0>; };
+
+            os_mac {
+                sequence = <O M>;
+                bindings = <&to 1>;
+            };
+
+            os_win {
+                sequence = <O W>;
+                bindings = <&to 0>;
+            };
         };
     };
 
@@ -579,7 +587,7 @@
         fish1: pw {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N3 &kp A &kp Q &kp H &kp Q &kp C &kp Y &kp B &kp N0 &kp N0 &kp DOT &kp N0 &kp N0>;
+            bindings = <&kp N0 &kp N0 &kp PERIOD &kp N0 &kp N0 &kp N3 &kp A &kp Q &kp H &kp Q &kp C &kp Y &kp B &kp N0 &kp N0 &kp DOT &kp N0 &kp N0>;
             label = "PW";
         };
 
@@ -786,6 +794,20 @@
             #binding-cells = <0>;
             bindings = <&kp N0 &kp N0 &kp DOT &kp N0 &kp N0 &kp N3 &kp A &kp Q &kp H &kp Q &kp C &kp Y &kp LS(B) &kp N0 &kp N0 &kp DOT &kp N0 &kp N0>;
             label = "FISH3";
+        };
+
+        word_netspi: word_netspi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N) &kp E &kp T &kp LS(S) &kp LS(P) &kp LS(I)>;
+            label = "WORD_NETSPI";
+        };
+
+        word_signoff_cmd: word_signoff_cmd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp FSLH &kp S &kp D &kp L &kp MINUS &kp M &kp E &kp D &kp I &kp U &kp M &kp MINUS &kp S &kp I &kp G &kp N &kp O &kp F &kp F &kp GRAVE>;
+            label = "WORD_SIGNOFF_CMD";
         };
     };
 
