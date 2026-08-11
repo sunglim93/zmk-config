@@ -552,7 +552,7 @@
         };
 
         leader1: leader1 {
-            compatible = "zmk, behavior-leader-key";
+            compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
             os_mac { sequence = <O M>; bindings = <&to 1>; };
             os_win { sequence = <O W>; bindings = <&to 0>; };
