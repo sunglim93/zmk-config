@@ -45,7 +45,7 @@
         oneHand {
             bindings = <&tog 7>;
             key-positions = <0 1 11 10>;
-            layers = <0>;
+            layers = <0 7>;
         };
 
         esc {
@@ -884,11 +884,11 @@
 
         oneHand {
             bindings = <
-&trans  &trans         &trans         &trans                             &trans                               &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(MINUS)  &kp LC(EQUAL)  &kp UP_ARROW                       &trans                               &holdTap LS(LC(T)) T    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(W)      &kp LEFT       &kp DOWN                           &kp RIGHT                            &img                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans         &as X          &holdTap LC(NUMBER_1) LC(PAGE_UP)  &holdTap LC(NUMBER_9) LC(PAGE_DOWN)  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                                      &trans                             &trans                               &trans                  &trans  &trans  &trans
+&trans  &trans         &trans         &trans                             &trans                               &trans                  &trans  &trans   &trans  &trans    &trans  &trans
+&trans  &kp LC(MINUS)  &kp LC(EQUAL)  &kp UP_ARROW                       &trans                               &holdTap LS(LC(T)) T    &trans  &trans   &trans  &trans    &trans  &trans
+&trans  &kp LS(W)      &kp LEFT       &kp DOWN                           &kp RIGHT                            &img                    &trans  &fzLeft  &trans  &fzRight  &trans  &trans
+&trans  &trans         &as X          &holdTap LC(NUMBER_1) LC(PAGE_UP)  &holdTap LC(NUMBER_9) LC(PAGE_DOWN)  &trans                  &trans  &trans   &trans  &trans    &trans  &trans
+                                      &trans                             &trans                               &trans                  &trans  &trans   &trans
             >;
         };
 
