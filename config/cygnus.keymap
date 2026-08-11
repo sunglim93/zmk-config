@@ -44,7 +44,7 @@
 
         oneHand {
             bindings = <&tog 7>;
-            key-positions = <13 14 15 20 21 22 21 16 19>;
+            key-positions = <0 1 11 10>;
             layers = <0>;
         };
 
