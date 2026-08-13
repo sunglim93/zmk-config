@@ -585,6 +585,11 @@
                 bindings = <&to 0>;
             };
 
+            os_linux {
+                sequence = <O L>;
+                bindings = <&to 2>;
+            };
+
             p_netspi {
                 sequence = <P N>;
                 bindings = <&fish1>;
@@ -613,6 +618,21 @@
             w_code_block {
                 sequence = <W C>;
                 bindings = <&ptm_codeBlock>;
+            };
+
+            l_check_mem {
+                sequence = <L M>;
+                bindings = <&linux_check_mem>;
+            };
+
+            l_ssh {
+                sequence = <L S>;
+                bindings = <&linux_ssh>;
+            };
+
+            l_check_drives {
+                sequence = <L D>;
+                bindings = <&linux_check_mounted_drives>;
             };
         };
     };
