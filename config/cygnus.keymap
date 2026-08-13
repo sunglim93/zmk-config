@@ -70,7 +70,7 @@
         };
 
         tasks {
-            bindings = <&kp LC(LA(TAB))>;
+            bindings = <&holdTap LG(TAB) LC(LA(TAB))>;
             key-positions = <37 39>;
             require-prior-idle-ms = <200>;
             layers = <0>;
@@ -102,12 +102,6 @@
             layers = <0>;
         };
 
-        tg_mac {
-            bindings = <&to 1>;
-            key-positions = <36 24 47 35>;
-            layers = <0>;
-        };
-
         mac_cp {
             bindings = <&kp LG(C)>;
             key-positions = <38 39>;
@@ -119,12 +113,6 @@
             bindings = <&kp LG(V)>;
             key-positions = <40 39>;
             require-prior-idle-ms = <200>;
-            layers = <1>;
-        };
-
-        tg_windows {
-            bindings = <&to 0>;
-            key-positions = <36 24 47 35>;
             layers = <1>;
         };
 
@@ -208,6 +196,13 @@
             layers = <0 1>;
             timeout-ms = <30>;
             require-prior-idle-ms = <150>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <26 27>;
+            require-prior-idle-ms = <150>;
+            timeout-ms = <30>;
         };
     };
 
