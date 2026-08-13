@@ -241,7 +241,7 @@
             bindings = <&mo>, <&sk>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
         };
 
         holdTap: holdTap {
@@ -837,6 +837,27 @@
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp FSLH &kp S &kp D &kp L &kp MINUS &kp M &kp E &kp D &kp I &kp U &kp M &kp MINUS &kp S &kp I &kp G &kp N &kp O &kp F &kp F &kp GRAVE>;
             label = "WORD_SIGNOFF_CMD";
+        };
+
+        linux_check_mem: linux_check_mem {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F &kp R &kp E &kp E &kp SPACE &kp MINUS &kp H>;
+            label = "LINUX_CHECK_MEM";
+        };
+
+        linux_ssh: linux_ssh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp S &kp H &kp SPACE &kp S &kp U &kp N &kp G &kp AT &kp S &kp U &kp N &kp G &kp MINUS &kp S &kp E &kp R &kp V &kp E &kp R>;
+            label = "LINUX_SSH";
+        };
+
+        linux_check_mounted_drives: linux_check_mounted_drives {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp L &kp S &kp B &kp L &kp K &kp SPACE &kp MINUS &kp F>;
+            label = "LINUX_CHECK_MOUNTED_DRIVES";
         };
     };
 
