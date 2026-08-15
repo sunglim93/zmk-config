@@ -92,7 +92,7 @@
             bindings = <&kp LA(F4)>;
             key-positions = <14 15 16 19 20 21>;
             require-prior-idle-ms = <200>;
-            layers = <0>;
+            layers = <0 2>;
         };
 
         select_line {
